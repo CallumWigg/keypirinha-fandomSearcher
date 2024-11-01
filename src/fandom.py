@@ -3,7 +3,6 @@ import json
 import time
 import urllib.request
 
-
 import keypirinha as kp
 import keypirinha_util as kpu
 import keypirinha_net as kpnet
@@ -22,7 +21,7 @@ class FandomWiki(kp.Plugin):
     def __init__(self):
         super().__init__()
         self.dbg("FandomWiki plugin initialized")
-        self._debug = True  # Set this to True to enable detailed debug logging
+        self._debug = False  # Set this to True to enable detailed debug logging
         self._wiki_pages = []
         self._wikis = []
         self._IMAGES_PATH = os.path.join(self.get_package_cache_path(), self.ICONS_FOLDER_NAME)
